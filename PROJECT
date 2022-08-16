@@ -1,0 +1,28 @@
+domain: broadcast.logger
+layout:
+- go.kubebuilder.io/v3
+projectName: log-broadcast
+repo: broadcast.logger/schemalogger
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: broadcast.logger
+  group: broadcast
+  kind: SchemaLogger
+  path: broadcast.logger/schemalogger/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: broadcast.logger
+  group: broadcast
+  kind: SchemaLogger
+  path: broadcast.logger/schemalogger/api/v1beta1
+  version: v1beta1
+  webhooks:
+    conversion: true
+    webhookVersion: v1
+version: "3"

@@ -1,0 +1,10 @@
+apiVersion: broadcast.broadcast.logger/v1beta1
+kind: SchemaLogger
+metadata:
+  name: schemalogger-sample
+spec:
+  # TODO(user): Add fields here
+  appname: logserver
+  image: TBD #handling for this field not added yet
+  title: TBD #handling for this field not added yet
+  condition: pending

@@ -1,0 +1,20 @@
+# permissions for end users to view schemaloggers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: schemalogger-viewer-role
+rules:
+- apiGroups:
+  - broadcast.broadcast.logger
+  resources:
+  - schemaloggers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - broadcast.broadcast.logger
+  resources:
+  - schemaloggers/status
+  verbs:
+  - get

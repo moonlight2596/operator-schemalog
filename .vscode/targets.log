@@ -1,0 +1,437 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Tue Aug 16 16:46:24 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
+# makefile (from 'Makefile', line 17)
+.SHELLFLAGS = -ec
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /home/mahnoor/log-broadcast
+# makefile (from 'Makefile', line 16)
+SHELL = /usr/bin/env bash -o pipefail
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /mnt/c/Users/dell 3510/AppData/Local/Programs/Microsoft VS Code/bin/code
+# makefile (from 'Makefile', line 105)
+LOCALBIN = $(shell pwd)/bin
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /mnt/c/Users/dell 3510/AppData/Local/Programs/Microsoft VS Code
+# environment
+GOPROXY = https://proxy.golang.org,direct
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/mahnoor/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/home/mahnoor/.local/bin:/home/mahnoor/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/AMD/ATI.ACE/Core-Static:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/dell 3510/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/dell 3510/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/dell 3510/AppData/Roaming/npm:/snap/bin:/usr/local/go/bin
+# makefile (from 'Makefile', line 118)
+KUSTOMIZE_INSTALL_SCRIPT = "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
+# environment
+GOPATH = /home/mahnoor/go
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f8ee6b4a-fcb0-4639-a5c4-320b2709d0f7.sock
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 111)
+CONTROLLER_GEN = $(LOCALBIN)/controller-gen
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
+%F = $(notdir $%)
+# makefile (from 'Makefile', line 9)
+GOBIN = $(shell go env GOPATH)/bin
+# environment
+PWD = /home/mahnoor/log-broadcast
+# default
+.LOADED := 
+# environment
+WSL_INTEROP = /run/WSL/9_interop
+# environment
+WT_SESSION = 108dae37-5aaf-4cdd-bb83-7bab70946f93
+# environment
+GOMODCACHE = /home/mahnoor/go/pkg/mod
+# environment
+HOME = /home/mahnoor
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = mahnoor
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = mahnoor
+# makefile
+.DEFAULT_GOAL := all
+# environment
+NAME = Code
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/dell 3510/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 110)
+KUSTOMIZE = $(LOCALBIN)/kustomize
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 3)
+IMG = controller:latest
+# makefile (from 'Makefile', line 116)
+CONTROLLER_TOOLS_VERSION = v0.9.2
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from 'Makefile', line 115)
+KUSTOMIZE_VERSION = v3.8.7
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 112)
+ENVTEST = $(LOCALBIN)/setup-envtest
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# environment
+WT_PROFILE_ID = {5a069d55-87bd-57cf-8a07-2726b203d3e5}
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 82)
+ignore-not-found = false
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# makefile (from 'Makefile', line 5)
+ENVTEST_K8S_VERSION = 1.24.2
+# environment
+WSL_DISTRO_NAME = Ubuntu-20.04
+# environment
+MOTD_SHOWN = update-motd
+# variable set hash-table stats:
+# Load=81/1024=8%, Rehash=0, Collisions=8/188=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2064, inode 189117): 17 files, no impossibilities.
+
+# 17 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+/home/mahnoor/log-broadcast/bin:
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-15 16:30:19.0207748
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 107):
+	mkdir -p $(LOCALBIN)
+
+envtest: /home/mahnoor/log-broadcast/bin/setup-envtest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+all: build
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+
+docker-build: test
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 73):
+	docker build -t ${IMG} .
+
+.PHONY: all help manifests generate fmt vet test build run docker-build docker-push install uninstall deploy undeploy kustomize controller-gen envtest
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# 'override' directive
+/home/mahnoor/log-broadcast/bin/controller-gen: .SHELLSTATUS := 0
+/home/mahnoor/log-broadcast/bin/controller-gen: /home/mahnoor/log-broadcast/bin
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Last modified 2022-08-10 20:10:44.4278907
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := /home/mahnoor/log-broadcast/bin/controller-gen
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := /home/mahnoor/log-broadcast/bin
+# automatic
+# | := 
+# automatic
+# < := /home/mahnoor/log-broadcast/bin
+# automatic
+# ^ := /home/mahnoor/log-broadcast/bin
+# automatic
+# ? := /home/mahnoor/log-broadcast/bin
+# variable set hash-table stats:
+# Load=9/32=28%, Rehash=0, Collisions=7/22=32%
+#  recipe to execute (from 'Makefile', line 127):
+	test -s $(LOCALBIN)/controller-gen || GOBIN=$(LOCALBIN) go install sigs.k8s.io/controller-tools/cmd/controller-gen@$(CONTROLLER_TOOLS_VERSION)
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+uninstall: manifests kustomize
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 91):
+	$(KUSTOMIZE) build config/crd | kubectl delete --ignore-not-found=$(ignore-not-found) -f -
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:02:42.6778907
+#  File has been updated.
+#  Successfully updated.
+
+test: manifests generate fmt vet envtest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 59):
+	KUBEBUILDER_ASSETS="$(shell $(ENVTEST) use $(ENVTEST_K8S_VERSION) -p path)" go test ./... -coverprofile cover.out
+
+build: generate fmt vet
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+#  recipe to execute (from 'Makefile', line 65):
+	go build -o bin/manager main.go
+
+vet:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 55):
+	go vet ./...
+
+/home/mahnoor/log-broadcast/bin/kustomize: /home/mahnoor/log-broadcast/bin
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 122):
+	test -s $(LOCALBIN)/kustomize || { curl -s $(KUSTOMIZE_INSTALL_SCRIPT) | bash -s -- $(subst v,,$(KUSTOMIZE_VERSION)) $(LOCALBIN); }
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 37):
+	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_0-9-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+
+kustomize: /home/mahnoor/log-broadcast/bin/kustomize
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+generate: controller-gen
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+#  recipe to execute (from 'Makefile', line 47):
+	$(CONTROLLER_GEN) object:headerFile="hack/boilerplate.go.txt" paths="./..."
+
+undeploy:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 100):
+	$(KUSTOMIZE) build config/default | kubectl delete --ignore-not-found=$(ignore-not-found) -f -
+
+manifests: controller-gen
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 43):
+	$(CONTROLLER_GEN) rbac:roleName=manager-role crd webhook paths="./..." output:crd:artifacts:config=config/crd/bases
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/mahnoor/log-broadcast/bin/setup-envtest: /home/mahnoor/log-broadcast/bin
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 132):
+	test -s $(LOCALBIN)/setup-envtest || GOBIN=$(LOCALBIN) go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
+
+run: manifests generate fmt vet
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 69):
+	go run ./main.go
+
+fmt:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 51):
+	go fmt ./...
+
+deploy: manifests kustomize
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 95):
+	cd config/manager && $(KUSTOMIZE) edit set image controller=${IMG}
+	$(KUSTOMIZE) build config/default | kubectl apply -f -
+
+controller-gen: /home/mahnoor/log-broadcast/bin/controller-gen
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+
+docker-push:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 77):
+	docker push ${IMG}
+
+install: manifests kustomize
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 87):
+	$(KUSTOMIZE) build config/crd | kubectl apply -f -
+
+# files hash-table stats:
+# Load=26/1024=3%, Rehash=0, Collisions=3/121=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 44 / storage = 498 B / avg = 11 B
+# current buf: size = 8162 B / used = 498 B / count = 44 / avg = 11 B
+
+# strcache performance: lookups = 153 / hit rate = 71%
+# hash-table stats:
+# Load=44/8192=1%, Rehash=0, Collisions=1/153=1%
+# Finished Make data base on Tue Aug 16 16:46:24 2022
+
+ 
