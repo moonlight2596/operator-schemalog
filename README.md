@@ -1,8 +1,9 @@
 # log-broadcast
-// TODO(user): Add simple overview of use/purpose
+It does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+ Use
+`kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
