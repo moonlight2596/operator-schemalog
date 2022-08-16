@@ -1,6 +1,8 @@
 # log-broadcast
 It does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
 
+After building, storage version will be v1beta1.
+
 ## Description
  Use
 `kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples
