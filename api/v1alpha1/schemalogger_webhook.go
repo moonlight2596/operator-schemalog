@@ -14,15 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package v1beta1
+package v1alpha1
 
 import (
 	ctrl "sigs.k8s.io/controller-runtime"
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
 )
 
 // log is for logging in this package.
-var schemaloggerlog = logf.Log.WithName("schemalogger-resource")
 
 func (r *SchemaLogger) SetupWebhookWithManager(mgr ctrl.Manager) error {
 
