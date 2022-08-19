@@ -1,11 +1,11 @@
 apiVersion: broadcast.broadcast.logger/v1alpha1
 kind: SchemaLogger
 metadata:
-  name: schemalogger-sample
+  name: schemalogger-deprecated-new
 spec:
   # TODO(user): Add fields here
   appname: logserver
   image: TBD #handling for this field not added yet
-  title: TBD #handling for this field not added yet
+  title: iamv1alpha1 #handling for this field not added yet
   
   

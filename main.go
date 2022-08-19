@@ -24,7 +24,6 @@ import (
 	// to ensure that exec-entrypoint and run can make use of them.
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 
-	broadcastv1alpha1 "broadcast.logger/schemalogger/api/v1alpha1"
 	broadcastv1beta1 "broadcast.logger/schemalogger/api/v1beta1"
 	"broadcast.logger/schemalogger/controllers"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -45,7 +44,7 @@ func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
 	utilruntime.Must(broadcastv1beta1.AddToScheme(scheme))
-	utilruntime.Must(broadcastv1alpha1.AddToScheme(scheme))
+	//	utilruntime.Must(broadcastv1alpha1.AddToScheme(scheme)) /*this line is the key for the webhook*/
 	//+kubebuilder:scaffold:scheme
 }
 
@@ -103,10 +102,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err = (&broadcastv1alpha1.SchemaLogger{}).SetupWebhookWithManager(mgr); err != nil {
-		setupLog.Error(err, "unable to create webhook", "webhook", "SchemaLogger")
-		os.Exit(1)
-	}
+	// if err = (&broadcastv1alpha1.SchemaLogger{}).SetupWebhookWithManager(mgr); err != nil {
+	// 	setupLog.Error(err, "unable to create webhook", "webhook", "SchemaLogger")
+	// 	os.Exit(1)
+	// }
 
 	//+kubebuilder:scaffold:builder
 

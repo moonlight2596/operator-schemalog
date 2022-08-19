@@ -6,5 +6,5 @@ spec:
   # TODO(user): Add fields here
   appname: logserver
   image: TBD #handling for this field not added yet
-  title: TBD #handling for this field not added yet
+  title: iamv1beta1 #handling for this field not added yet
   condition: pending
