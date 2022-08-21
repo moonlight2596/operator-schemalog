@@ -25,7 +25,6 @@ func (dst *SchemaLogger) ConvertFrom(srcRaw conversion.Hub) error {
 	src := srcRaw.(*v1beta1.SchemaLogger)
 	dst.ObjectMeta = src.ObjectMeta
 	dst.Status = SchemaLoggerStatus(src.Status)
-	broadcastlog.Info("Converted v1beta1 to v1alpha1", dst)
 	fmt.Println(dst)
 	return nil
 }
