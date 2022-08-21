@@ -13,4 +13,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: mahamfirdous/log-broadcast
-  newTag: v3.0.3
+  newTag: v3.0.4

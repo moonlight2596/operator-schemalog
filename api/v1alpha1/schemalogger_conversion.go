@@ -16,6 +16,9 @@ func (src *SchemaLogger) ConvertTo(dstRaw conversion.Hub) error {
 	dst.Spec.Condition = "default-condition"
 	dst.ObjectMeta = src.ObjectMeta
 	dst.Status = v1beta1.SchemaLoggerStatus(src.Status)
+	dst.Spec.AppName = src.Spec.AppName
+	dst.Spec.Image = src.Spec.Image
+	dst.Spec.Title = src.Spec.Title
 	fmt.Println(dst)
 	return nil
 }
@@ -25,6 +28,9 @@ func (dst *SchemaLogger) ConvertFrom(srcRaw conversion.Hub) error {
 	src := srcRaw.(*v1beta1.SchemaLogger)
 	dst.ObjectMeta = src.ObjectMeta
 	dst.Status = SchemaLoggerStatus(src.Status)
+	dst.Spec.AppName = src.Spec.AppName
+	dst.Spec.Image = src.Spec.Image
+	dst.Spec.Title = src.Spec.Title
 	fmt.Println(dst)
 	return nil
 }
