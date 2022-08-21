@@ -73,7 +73,7 @@ func (r *SchemaLoggerReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	} else {
 		for _, piece := range podlist.Items {
 			if name := piece.GetName(); name == schemaMessage.Spec.AppName {
-				log.Info("Found a pod linked to the CR", "name", name)
+				log.Info("Found a pod linked to the CR", "name", name, "CR", req.Name)
 				log.Info("sending schema log to pod linked to CR, named", "name", name)
 				// TODO(user): add checks for image instead of zero indexing to first container
 				port := strconv.Itoa(int(piece.Spec.Containers[0].Ports[0].ContainerPort))

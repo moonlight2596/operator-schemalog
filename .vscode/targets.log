@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 23:51:13 2022
+# Make data base, printed on Sun Aug 21 22:19:29 2022
 
 # Variables
 
@@ -19,6 +19,7 @@ WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # makefile (from 'Makefile', line 17)
 .SHELLFLAGS = -ec
 # automatic
+ 
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -59,7 +60,7 @@ GOPATH = /home/mahnoor/go
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-64b23c1b-f1ae-43c0-aacd-6aeb4662d9fa.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c41ef79e-238b-46c6-8609-54a1202db9ae.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # makefile (from 'Makefile', line 111)
@@ -75,9 +76,9 @@ PWD = /home/mahnoor/log-broadcast
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/367_interop
+WSL_INTEROP = /run/WSL/3112_interop
 # environment
-WT_SESSION = 5932b098-c07d-4a63-84d0-8b95e1814cc5
+WT_SESSION = d85e8b03-d0ef-4925-a52e-a9eda2504f16
 # environment
 GOMODCACHE = /home/mahnoor/go/pkg/mod
 # environment
@@ -275,7 +276,6 @@ Makefile:
 #  Last modified 2022-08-10 20:02:42.6778907
 #  File has been updated.
 #  Successfully updated.
- 
 
 test: manifests generate fmt vet envtest
 #  Phony target (prerequisite of .PHONY).
@@ -295,6 +295,7 @@ build: generate fmt vet
 # Load=0/32=0%, Rehash=0, Collisions=0/12=0%
 #  recipe to execute (from 'Makefile', line 65):
 	go build -o bin/manager main.go
+ 
 
 vet:
 #  Phony target (prerequisite of .PHONY).
@@ -429,6 +430,6 @@ install: manifests kustomize
 # strcache performance: lookups = 154 / hit rate = 70%
 # hash-table stats:
 # Load=45/8192=1%, Rehash=0, Collisions=1/154=1%
-# Finished Make data base on Fri Aug 19 23:51:13 2022
+# Finished Make data base on Sun Aug 21 22:19:30 2022
 
  
