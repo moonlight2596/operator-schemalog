@@ -1,8 +1,11 @@
 # log-broadcast
-// TODO(user): Add simple overview of use/purpose
+It does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
+
+After building, storage version will be v1beta1.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+ Use
+`kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2 --port=8003` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
@@ -20,12 +23,19 @@ kubectl apply -f config/samples/
 ```sh
 make docker-build docker-push IMG=<some-registry>/log-broadcast:tag
 ```
+*Recommended*: Or just use mine: 
+```
+mahamfirdous/log-broadcast:v3.0.6
+```
 	
 3. Deploy the controller to the cluster with the image specified by `IMG`:
 
 ```sh
 make deploy IMG=<some-registry>/log-broadcast:tag
 ```
+
+Just use my registry mentioned above
+`make deploy IMG=mahamfirdous/log-broadcast:v3.0.6`
 
 ### Uninstall CRDs
 To delete the CRDs from the cluster:
