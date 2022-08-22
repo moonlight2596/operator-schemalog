@@ -1,11 +1,14 @@
 # log-broadcast
-// TODO(user): Add simple overview of use/purpose
+This operator's purpose to explore multiversion APIs at the simplest level. It will expand to exploring operator potential eventually. Right now, it does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
+For demonstrative purposes it is not necessary to build. More on this below. 
+After building, storage version will be v1beta1.
 
-## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+## Demonstrative setup
+ Use
+`kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2 --port=8003` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples. Remember to specify a containerPort in the manifest regardless of the directives in the used docker image.
 
 ## Getting Started
-You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
+You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster. The cluster used for testing was a single node k3s installation on WSL2.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 
 ### Running on the cluster
@@ -15,16 +18,20 @@ You’ll need a Kubernetes cluster to run against. You can use [KIND](https://si
 kubectl apply -f config/samples/
 ```
 
-2. Build and push your image to the location specified by `IMG`:
+2. Provide or provision an image. Either (*Recommended*) use mine: mahamfirdous/log-broadcast:v3.0.6
+	Or just
+2a. Build and push your image to the location specified by `IMG`:
 	
 ```sh
 make docker-build docker-push IMG=<some-registry>/log-broadcast:tag
+
 ```
 	
 3. Deploy the controller to the cluster with the image specified by `IMG`:
 
 ```sh
 make deploy IMG=<some-registry>/log-broadcast:tag
+Just use my registry mentioned above
 ```
 
 ### Uninstall CRDs
@@ -40,10 +47,8 @@ UnDeploy the controller to the cluster:
 ```sh
 make undeploy
 ```
-
-## Contributing
-// TODO(user): Add detailed information on how you would like others to contribute to this project
-
+	
+	
 ### How it works
 This project aims to follow the Kubernetes [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
@@ -76,6 +81,17 @@ make manifests
 
 More information can be found via the [Kubebuilder Documentation](https://book.kubebuilder.io/introduction.html)
 
+	
+## References
+https://book.kubebuilder.io
+https://developer.ibm.com/tutorials/create-a-conversion-webhook-with-the-operator-sdk/
+https://sdk.operatorframework.io/docs/best-practices/best-practices/
+https://sdk.operatorframework.io/
+http://heidloff.net/article/converting-custom-resource-versions-kubernetes-operators/
+https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/
+https://github.com/kubernetes-sigs/controller-runtime
+	
+	
 ## License
 
 Copyright 2022.
@@ -91,4 +107,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
