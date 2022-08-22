@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Mon Aug 22 21:57:14 2022
+# Make data base, printed on Sun Aug 21 22:19:29 2022
 
 # Variables
 
@@ -20,6 +19,7 @@ WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # makefile (from 'Makefile', line 17)
 .SHELLFLAGS = -ec
 # automatic
+ 
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -60,7 +60,7 @@ GOPATH = /home/mahnoor/go
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-318a7625-c79a-4225-93fd-a430e02e2c29.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c41ef79e-238b-46c6-8609-54a1202db9ae.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # makefile (from 'Makefile', line 111)
@@ -76,9 +76,9 @@ PWD = /home/mahnoor/log-broadcast
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/9_interop
+WSL_INTEROP = /run/WSL/3112_interop
 # environment
-WT_SESSION = ad14e238-4805-4a25-8e38-a9d3321340a0
+WT_SESSION = d85e8b03-d0ef-4925-a52e-a9eda2504f16
 # environment
 GOMODCACHE = /home/mahnoor/go/pkg/mod
 # environment
@@ -153,7 +153,6 @@ MAKEFILES :=
 LC_ALL = C
 # environment
 HOSTTYPE = x86_64
- 
 # automatic
 ^F = $(notdir $^)
 # default
@@ -172,10 +171,8 @@ TERM = xterm-256color
 ENVTEST_K8S_VERSION = 1.24.2
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
-# environment
-MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=81/1024=8%, Rehash=0, Collisions=8/188=4%
+# Load=80/1024=8%, Rehash=0, Collisions=8/187=4%
 
 # Pattern-specific Variable Values
 
@@ -298,6 +295,7 @@ build: generate fmt vet
 # Load=0/32=0%, Rehash=0, Collisions=0/12=0%
 #  recipe to execute (from 'Makefile', line 65):
 	go build -o bin/manager main.go
+ 
 
 vet:
 #  Phony target (prerequisite of .PHONY).
@@ -432,6 +430,6 @@ install: manifests kustomize
 # strcache performance: lookups = 154 / hit rate = 70%
 # hash-table stats:
 # Load=45/8192=1%, Rehash=0, Collisions=1/154=1%
-# Finished Make data base on Mon Aug 22 21:57:14 2022
+# Finished Make data base on Sun Aug 21 22:19:30 2022
 
  
