@@ -1,5 +1,5 @@
 # log-broadcast
-This operator's purpose to explore multiversion APIs at the simplest level. It will expand to exploring operator potential eventually. Right now, it does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
+This operator's purpose to explore multiversion APIs at the simplest level. It will expand to exploring operator potential eventually. Right now, it does not do much, only sends the schema of the API to the mentioned pod in the CRD as &lt;AppName&gt;. Pod needs to be listening for it.
 For demonstrative purposes it is not necessary to build. More on this below. 
 After building, storage version will be v1beta1.
 
