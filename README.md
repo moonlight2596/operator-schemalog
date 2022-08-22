@@ -19,7 +19,9 @@ kubectl apply -f config/samples/
 ```
 
 2. Provide or provision an image. Either (*Recommended*) use mine: mahamfirdous/log-broadcast:v3.0.6
+	
 	Or just
+	
 2a. Build and push your image to the location specified by `IMG`:
 	
 ```sh
