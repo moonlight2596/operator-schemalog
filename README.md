@@ -85,12 +85,19 @@ More information can be found via the [Kubebuilder Documentation](https://book.k
 
 	
 ## References
+	
 https://book.kubebuilder.io
+	
 https://developer.ibm.com/tutorials/create-a-conversion-webhook-with-the-operator-sdk/
+	
 https://sdk.operatorframework.io/docs/best-practices/best-practices/
+	
 https://sdk.operatorframework.io/
+	
 http://heidloff.net/article/converting-custom-resource-versions-kubernetes-operators/
+	
 https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/
+	
 https://github.com/kubernetes-sigs/controller-runtime
 	
 	
