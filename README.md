@@ -92,7 +92,7 @@ https://developer.ibm.com/tutorials/create-a-conversion-webhook-with-the-operato
 	
 https://sdk.operatorframework.io/docs/best-practices/best-practices/
 	
-https://sdk.operatorframework.io/
+https://sdk.operatorframework.io/docs
 	
 http://heidloff.net/article/converting-custom-resource-versions-kubernetes-operators/
 	
