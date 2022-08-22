@@ -22,15 +22,20 @@ kubectl apply -f config/samples/
 	
 ```sh
 make docker-build docker-push IMG=<some-registry>/log-broadcast:tag
-*Recommended*: Or just use mine: mahamfirdous/log-broadcast:v3.0.6
+```
+*Recommended*: Or just use mine: 
+```
+mahamfirdous/log-broadcast:v3.0.6
 ```
 	
 3. Deploy the controller to the cluster with the image specified by `IMG`:
 
 ```sh
 make deploy IMG=<some-registry>/log-broadcast:tag
-Just use my registry mentioned above
 ```
+
+Just use my registry mentioned above
+`make deploy IMG=mahamfirdous/log-broadcast:v3.0.6`
 
 ### Uninstall CRDs
 To delete the CRDs from the cluster:
