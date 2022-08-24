@@ -5,16 +5,15 @@ For demonstrative purposes it is not necessary to build. More on this below.
 After building, storage version will be v1beta1.
 
 ## Demonstrative setup
- Use
+
+Use kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml to install cert-manager into your cluster. You will need this to test the webhook conversion.
+
+Use
 `kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2 --port=8003` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples. Remember to specify a containerPort in the manifest regardless of the directives in the used docker image.
 
 It does not do much, only sends the schema of the API to the mentioned pod in the CRD as <AppName>. Pod needs to be listening for it.
 
 After building, storage version will be v1beta1.
-
-## Description
- Use
-`kubectl run <AppName> --image mahamfirdous/basicschemalogger:v0.0.2 --port=8003` for an image to pair with the CRD. Or alternatively user your own listener. Check the pod's logs to see results. Sample CRDs are in config/samples
 
 
 ## Getting Started
