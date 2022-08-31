@@ -1,7 +1,7 @@
 apiVersion: broadcast.broadcast.logger/v1beta1
 kind: SchemaLogger
 metadata:
-  name: schemalogger-sample
+  name: schemalogger-sample3r
 spec:
   # TODO(user): Add fields here
   appname: logserver

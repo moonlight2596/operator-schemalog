@@ -11,14 +11,14 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /mutate-broadcast-kubebuilder-io-v1beta1-schemalogger
+      path: /mutate-broadcast-broadcast-logger-v1beta1-schemalogger
   failurePolicy: Fail
   name: mbroadcast.logger
   rules:
   - apiGroups:
     - broadcast.broadcast.logger
     apiVersions:
-    - v1
+    - v1beta1
     operations:
     - CREATE
     - UPDATE
