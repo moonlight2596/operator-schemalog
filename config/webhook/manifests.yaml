@@ -1,0 +1,27 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  creationTimestamp: null
+  name: mutating-webhook-configuration
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /mutate-broadcast-kubebuilder-io-v1beta1-schemalogger
+  failurePolicy: Fail
+  name: mbroadcast.logger
+  rules:
+  - apiGroups:
+    - broadcast.broadcast.logger
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - schemaloggers
+  sideEffects: None
