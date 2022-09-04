@@ -13,7 +13,7 @@ webhooks:
       namespace: system
       path: /mutate-broadcast-broadcast-logger-v1beta1-schemalogger
   failurePolicy: Fail
-  name: mbroadcast.logger
+  name: mbroadcast.broadcast.logger
   rules:
   - apiGroups:
     - broadcast.broadcast.logger
@@ -24,4 +24,32 @@ webhooks:
     - UPDATE
     resources:
     - schemaloggers
+  sideEffects: None
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: null
+  name: validating-webhook-configuration
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /validate-broadcast-broadcast-logger-v1beta1-schemalogger
+  failurePolicy: Fail
+  name: vbroadcast.broadcast.logger
+  rules:
+  - apiGroups:
+    - broadcast.broadcast.logger
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - cronjobs
   sideEffects: None
