@@ -45,11 +45,11 @@ webhooks:
   - apiGroups:
     - broadcast.broadcast.logger
     apiVersions:
-    - v1
+    - v1beta1
     operations:
     - CREATE
     - UPDATE
     - DELETE
     resources:
-    - cronjobs
+    - schemaloggers
   sideEffects: None

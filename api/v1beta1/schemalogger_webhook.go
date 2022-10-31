@@ -47,7 +47,7 @@ func (r *SchemaLogger) SetupWebhookWithManager(mgr ctrl.Manager) error {
 // TODO(user): EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 //+kubebuilder:webhook:path=/mutate-broadcast-broadcast-logger-v1beta1-schemalogger,mutating=true,failurePolicy=fail,groups=broadcast.broadcast.logger,resources=schemaloggers,verbs=create;update,versions=v1beta1,name=mbroadcast.broadcast.logger,sideEffects=None,admissionReviewVersions=v1beta1
 
-//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-broadcast-broadcast-logger-v1beta1-schemalogger,mutating=false,failurePolicy=fail,groups=broadcast.broadcast.logger,resources=cronjobs,versions=v1,name=vbroadcast.broadcast.logger,sideEffects=None,admissionReviewVersions=v1beta1
+//+kubebuilder:webhook:verbs=create;update;delete,path=/validate-broadcast-broadcast-logger-v1beta1-schemalogger,mutating=false,failurePolicy=fail,groups=broadcast.broadcast.logger,resources=schemaloggers,versions=v1beta1,name=vbroadcast.broadcast.logger,sideEffects=None,admissionReviewVersions=v1beta1
 
 var _ webhook.Defaulter = &SchemaLogger{}
 
@@ -72,9 +72,11 @@ func (r *SchemaLogger) ValidateCreate() error {
 }
 
 func (r *SchemaLogger) ValidateUpdate(old runtime.Object) error {
+	schemaloggerlog.Info("Validate Update", "name", r.Name)
 	return nil
 }
 
 func (r *SchemaLogger) ValidateDelete() error {
+	schemaloggerlog.Info("Validate Deletion", "name", r.Name)
 	return nil
 }
