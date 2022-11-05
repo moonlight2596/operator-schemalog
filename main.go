@@ -24,15 +24,17 @@ import (
 	// to ensure that exec-entrypoint and run can make use of them.
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 
-	broadcastv1alpha1 "broadcast.logger/schemalogger/api/v1alpha1"
-	broadcastv1beta1 "broadcast.logger/schemalogger/api/v1beta1"
-	"broadcast.logger/schemalogger/controllers"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
+
+	broadcastv1 "broadcast.logger/schemalogger/api/v1"
+	broadcastv1alpha1 "broadcast.logger/schemalogger/api/v1alpha1"
+	broadcastv1beta1 "broadcast.logger/schemalogger/api/v1beta1"
+	"broadcast.logger/schemalogger/controllers"
 	//+kubebuilder:scaffold:imports
 )
 
@@ -46,6 +48,7 @@ func init() {
 
 	utilruntime.Must(broadcastv1beta1.AddToScheme(scheme))
 	utilruntime.Must(broadcastv1alpha1.AddToScheme(scheme)) /*this line is key to the webhook*/
+	utilruntime.Must(broadcastv1.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
 

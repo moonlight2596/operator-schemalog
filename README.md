@@ -28,7 +28,7 @@ You’ll need a Kubernetes cluster to run against. You can use [KIND](https://si
 kubectl apply -f config/samples/
 ```
 
-2. Provide or provision an image. Either (*Recommended*) use mine: mahamfirdous/log-broadcast:v3.0.6
+2. Provide or provision an image. Either (*Recommended*) use mine: gzlkhan/log-broadcast:v1.5
 	
 	Or just
 	

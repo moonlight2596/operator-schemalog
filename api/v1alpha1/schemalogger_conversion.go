@@ -19,6 +19,7 @@ func (src *SchemaLogger) ConvertTo(dstRaw conversion.Hub) error {
 	dst.Spec.AppName = src.Spec.AppName
 	dst.Spec.Image = src.Spec.Image
 	dst.Spec.Title = src.Spec.Title
+
 	fmt.Println(dst)
 	return nil
 }

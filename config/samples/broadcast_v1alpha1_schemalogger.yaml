@@ -5,7 +5,7 @@ metadata:
 spec:
   # TODO(user): Add fields here
   appname: logserver
-  image: TBD #handling for this field not added yet
+  image: me:v9.0 #handling for this field not added yet
   title: iamv1alpha1 #handling for this field not added yet
   
   
