@@ -30,17 +30,18 @@ type SchemaLoggerSpec struct {
 
 	// Foo is an example field of SchemaLogger. Edit schemalogger_types.go to remove/update
 
-	Title          string `json:"title,omitempty"`
-	Image          string `json:"image,omitempty"`
-	AppName        string `json:"appname,omitempty"`
-	Condition      string `json:"condition,omitempty"`
-	CRDVersionTest string `json:"crdversiontest,omitempty"`
+	Title           string `json:"title,omitempty"`
+	Image           string `json:"image,omitempty"`
+	AppName         string `json:"appname,omitempty"`
+	Condition       string `json:"condition,omitempty"`
+	CRDVersionTest1 string `json:"crdversiontest,omitempty"`
 }
 
 // SchemaLoggerStatus defines the observed state of SchemaLogger
 type SchemaLoggerStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Discovery bool `json:"discovery,omitempty"`
 }
 
 //+kubebuilder:object:root=true

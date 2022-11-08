@@ -35,7 +35,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 
-	broadcastv1beta1 "broadcast.logger/schemalogger/api/v1beta1"
+	broadcastv1 "broadcast.logger/schemalogger/api/v1"
 )
 
 // SchemaLoggerReconciler reconciles a SchemaLogger object
@@ -62,7 +62,7 @@ func (r *SchemaLoggerReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	log := log.FromContext(ctx)
 	log.Info("reconciling schemalogger CR")
 	// TODO(user): your logic here
-	var schemaMessage broadcastv1beta1.SchemaLogger
+	var schemaMessage broadcastv1.SchemaLogger
 	if err := r.Client.Get(ctx, req.NamespacedName, &schemaMessage); err != nil {
 		log.Error(err, "unable to fetch CR SchemaLogger")
 	}
@@ -97,7 +97,7 @@ func (r *SchemaLoggerReconciler) Reconcile(ctx context.Context, req ctrl.Request
 // SetupWithManager sets up the controller with the Manager.
 func (r *SchemaLoggerReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&broadcastv1beta1.SchemaLogger{}).
+		For(&broadcastv1.SchemaLogger{}).
 		Watches(
 			&source.Kind{Type: &corev1.Pod{}},
 			handler.EnqueueRequestsFromMapFunc(r.MapPodstoSchemaLogger),
@@ -112,7 +112,7 @@ func (r *SchemaLoggerReconciler) MapPodstoSchemaLogger(o client.Object) []reconc
 
 	//List of broadcast resources
 	request := []reconcile.Request{}
-	var resourcelist broadcastv1beta1.SchemaLoggerList
+	var resourcelist broadcastv1.SchemaLoggerList
 	if err := r.Client.List(context.TODO(), &resourcelist); err != nil {
 		log.Error(err, "Unable to list schemalogger resources")
 	} else {
@@ -128,7 +128,7 @@ func (r *SchemaLoggerReconciler) MapPodstoSchemaLogger(o client.Object) []reconc
 	return request
 }
 
-func (r *SchemaLoggerReconciler) SchemaLogBroadcast(URL string, schema *broadcastv1beta1.SchemaLoggerSpec) {
+func (r *SchemaLoggerReconciler) SchemaLogBroadcast(URL string, schema *broadcastv1.SchemaLoggerSpec) {
 	newSchema, prob := json.Marshal(schema)
 	if prob != nil {
 		fmt.Printf("Could not marshal request -- %v %s", prob, URL)
